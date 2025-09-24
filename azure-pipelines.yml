@@ -23,5 +23,4 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: 'C:\All code here\Agent & Pipelines\Todo-Agent\_work\1\s\env\dev'
     environmentServiceNameAzureRM: 'todo-service-connection'
