@@ -22,4 +22,5 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
     environmentServiceNameAzureRM: 'todo-service-connection'
