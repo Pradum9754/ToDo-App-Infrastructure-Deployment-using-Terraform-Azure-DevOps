@@ -22,4 +22,3 @@ override.tf.json
 .terraform.lock.hcl
 
 # Ignore sensitive files like backend config (don't push to git)
-*.tfvars
