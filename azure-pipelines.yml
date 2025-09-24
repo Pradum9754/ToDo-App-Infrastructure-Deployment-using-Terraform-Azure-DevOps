@@ -1,6 +1,6 @@
-# trigger: none
-# pool: todo-agent
-# name: deploying web app working todo infra app terraform
+trigger: none
+pool: todo-agent
+name: deploying web app working todo infra app terraform
 # steps:
 # - task: TerraformInstaller@1
 #   inputs:
