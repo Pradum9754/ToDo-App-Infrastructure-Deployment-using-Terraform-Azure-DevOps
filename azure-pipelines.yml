@@ -19,9 +19,9 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'validate'
-# - task: TerraformTask@5
-#   inputs:
-#     provider: 'azurerm'
-#     command: 'plan'
-#     workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
-#     environmentServiceNameAzureRM: 'todo-service-connection'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    workingDirectory: 'C:\All code here\Agent & Pipelines\Todo-Agent\_work\1\s\env\dev'
+    environmentServiceNameAzureRM: 'todo-service-connection'
