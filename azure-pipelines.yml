@@ -9,7 +9,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: 'todo-service-connection'
     backendAzureRmResourceGroupName: 'todorgpra'
     backendAzureRmStorageAccountName: 'todostpra'
