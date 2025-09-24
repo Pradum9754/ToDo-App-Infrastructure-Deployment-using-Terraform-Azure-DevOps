@@ -15,6 +15,7 @@ steps:
     backendAzureRmStorageAccountName: 'todostpra'
     backendAzureRmContainerName: 'todostpra'
     backendAzureRmKey: 'terraform.tfstate'
+    additionalArguments: '-reconfigure'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
