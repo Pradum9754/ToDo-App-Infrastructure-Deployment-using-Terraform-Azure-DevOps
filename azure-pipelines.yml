@@ -9,7 +9,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     backendServiceArm: 'todo-service-connection'
     backendAzureRmResourceGroupName: 'todorgpra'
     backendAzureRmStorageAccountName: 'todostpra'
@@ -19,10 +19,10 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'validate'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: TerraformTask@5
   inputs:
     provider: 'azurerm'
     command: 'plan'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
     environmentServiceNameAzureRM: 'todo-service-connection'
