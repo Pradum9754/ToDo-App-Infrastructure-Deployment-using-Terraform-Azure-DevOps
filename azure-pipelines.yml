@@ -1,0 +1,28 @@
+trigger: none
+pool: todo-agent
+name: todo-app-deployment
+steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
+    backendServiceArm: 'todo-service-connection'
+    backendAzureRmResourceGroupName: 'todorgpra'
+    backendAzureRmStorageAccountName: 'todostpra'
+    backendAzureRmContainerName: 'todoconpra'
+    backendAzureRmKey: 'terraform.tfstate'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'validate'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/env/dev'
+    environmentServiceNameAzureRM: 'todo-service-connection'
